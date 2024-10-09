@@ -1,0 +1,28 @@
+.nav-link {
+    position: relative;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .nav-link:hover {
+    color: white; /* Keeps the text color white on hover */
+  }
+  
